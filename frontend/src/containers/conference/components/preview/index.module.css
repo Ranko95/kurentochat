@@ -1,0 +1,19 @@
+.Container {
+  width: 300px;
+  height: auto;
+  background: whitesmoke;
+  border-radius: 10px;
+  padding: 30px 20px;
+  display: flex;
+  flex-flow: column;
+}
+
+.ErrorMessage {
+  color: red;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.ActionButton {
+  width: 100%;
+}

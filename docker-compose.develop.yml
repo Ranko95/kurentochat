@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+  kms:
+    environment:
+      - KMS_MIN_PORT=50500
+      - KMS_MAX_PORT=50600
+    ports:
+    - 50500-50600:50500-50600/tcp
+    - 50500-50600:50500-50600/udp
+
+  backend:
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - 8081:5000
+    environment:
+      - NODE_ENV=production
+
+  frontend:
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - 8080:3000
+    environment:
+      - SOCKET_URL=https://kurentochat-ranko.staging.forasoft.com

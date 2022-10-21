@@ -1,0 +1,15 @@
+.Button {
+  height: 42px;
+  padding: 0 8px;
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 10px;
+  user-select: none;
+}
+
+.Button.Primary {
+  color: white;
+  background: linear-gradient(116deg, #044dff, #8c1dff);
+}

@@ -1,0 +1,16 @@
+.Container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 30px;
+  padding: 50px 50px;
+  justify-content: center;
+}
+
+.Grid0, .Grid1 {
+  grid-template-columns: 100%;
+}
+
+.Grid2, .Grid3, .Grid4 {
+  grid-template-columns: repeat(2, 50%);
+}

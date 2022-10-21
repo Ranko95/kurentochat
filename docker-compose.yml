@@ -1,0 +1,23 @@
+version: '3.7'
+services:
+  kms:
+    restart: always
+    image: kurento/kurento-media-server:latest
+
+  backend:
+    restart: always
+    build: backend
+    environment:
+      - TURN_URL=kurentoturn:kurentoturnpassword@78.46.107.230:3486
+    depends_on:
+      - kms
+
+  frontend:
+    restart: always
+    build: frontend
+    environment:
+      - TURN_USERNAME=kurentoturn
+      - TURN_PASSWORD=kurentoturnpassword
+      - TURN_URL=78.46.107.230:3486
+    depends_on:
+      - backend

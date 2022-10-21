@@ -1,0 +1,41 @@
+{
+  "name": "backend",
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=16.3.0"
+  },
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.ts",
+    "lint": "eslint ./src/",
+    "lint:fix": "eslint ./src/ --fix",
+    "lint:watch": "npm run lint --watch"
+  },
+  "dependencies": {
+    "axios": "0.21.4",
+    "dotenv": "10.0.0",
+    "joi": "^17.4.2",
+    "kurento-client": "^6.16.0",
+    "morgan": "1.10.0",
+    "socket.io": "^4.3.2",
+    "uuid": "8.3.2",
+    "winston": "3.3.3",
+    "winston-transport": "4.4.0"
+  },
+  "devDependencies": {
+    "@types/kurento-client": "^6.14.5",
+    "@types/morgan": "1.9.3",
+    "@types/node": "16.4.6",
+    "@types/uuid": "8.3.1",
+    "@typescript-eslint/eslint-plugin": "4.26.1",
+    "@typescript-eslint/parser": "4.26.1",
+    "eslint": "7.28.0",
+    "eslint-config-airbnb-typescript": "12.3.1",
+    "eslint-plugin-import": "2.23.4",
+    "nodemon": "2.0.7",
+    "ts-node": "10.1.0",
+    "typescript": "4.3.2"
+  }
+}
